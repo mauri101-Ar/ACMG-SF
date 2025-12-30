@@ -21,12 +21,13 @@ The following table tracks the history of ACMG Secondary Findings (SF) lists, li
 
 The TSV files follow this schema:
 
-* **Gene:** Official HUGO Gene Symbol.
-* **HGNC_ID:** Stable identifier from HGNC (Essential for mapping).
-* **MIM Disorder:** OMIM ID for the associated phenotype.
-* **Inheritance:** Mode of inheritance (AD: Autosomal Dominant, AR: Autosomal Recessive, etc.).
-* **Variants to Report:** Specific criteria for variant reporting (e.g., "LP/P", "Truncating only").
-* **ACMG SF List Version:** Version of the guideline.
+* **Phenotype:** The specific clinical condition or disease associated with the gene (e.g., "Familial Hypercholesterolemia", "Lynch Syndrome").  
+* **Gene:** Official HUGO Gene Symbol.  
+* **HGNC_ID:** Stable identifier from HGNC (Essential for mapping).  
+* **MIM Disorder:** OMIM ID for the associated phenotype.  
+* **Inheritance:** Mode of inheritance (AD: Autosomal Dominant, AR: Autosomal Recessive, etc.).  
+* **Variants to Report:** Specific criteria for variant reporting (e.g., "LP/P", "Truncating only").  
+* **ACMG SF List Version:** Version of the guideline.  
 
 ## Usage in Pipelines
 
