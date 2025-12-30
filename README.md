@@ -10,12 +10,12 @@ The following table tracks the history of ACMG Secondary Findings (SF) lists, li
 
 | Version | Year | PubMed | TSV Data |
 | :--- | :---: | :--- | :--- |
-| **v3.3** | 2025 | [PMID: 37347242](https://pubmed.ncbi.nlm.nih.gov/40568962/) | [Download](./data/ACMG_SF_v3.3.tsv) |
-| **v3.2** | 2023 | [PMID: 37347242](https://pubmed.ncbi.nlm.nih.gov/37347242/) | [Download](./data/ACMG_SF_v3.2.tsv) |
-| **v3.1** | 2022 | [PMID: 35802134](https://pubmed.ncbi.nlm.nih.gov/35802134/) | [Download](./data/ACMG_SF_v3.1.tsv) |
-| **v3.0** | 2021 | [PMID: 34012068](https://pubmed.ncbi.nlm.nih.gov/34012068/) | [Download](./data/ACMG_SF_v3.0.tsv) |
-| **v2.0** | 2016 | [PMID: 27854360](https://pubmed.ncbi.nlm.nih.gov/27854360/) | [Download](./data/ACMG_SF_v2.0.tsv) |
-| **v1.0** | 2013 | [PMID: 23788249](https://pubmed.ncbi.nlm.nih.gov/23788249/) | [Download](./data/ACMG_SF_v1.0.tsv) |
+| **v3.3** | 2025 | [PMID: 37347242](https://pubmed.ncbi.nlm.nih.gov/40568962/) | [Download](./data/ACMG_SF_3.3.tsv) |
+| **v3.2** | 2023 | [PMID: 37347242](https://pubmed.ncbi.nlm.nih.gov/37347242/) | [Download](./data/ACMG_SF_3.2.tsv) |
+| **v3.1** | 2022 | [PMID: 35802134](https://pubmed.ncbi.nlm.nih.gov/35802134/) | [Download](./data/ACMG_SF_3.1.tsv) |
+| **v3.0** | 2021 | [PMID: 34012068](https://pubmed.ncbi.nlm.nih.gov/34012068/) | [Download](./data/ACMG_SF_3.0.tsv) |
+| **v2.0** | 2016 | [PMID: 27854360](https://pubmed.ncbi.nlm.nih.gov/27854360/) | [Download](./data/ACMG_SF_2.0.tsv) |
+| **v1.0** | 2013 | [PMID: 23788249](https://pubmed.ncbi.nlm.nih.gov/23788249/) | [Download](./data/ACMG_SF_1.0.tsv) |
 
 ## Column Description
 
