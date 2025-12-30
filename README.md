@@ -34,8 +34,8 @@ The TSV files follow this schema:
 You can pull a specific version using `wget` or `curl` pointing to the raw file:
 
 ```bash
-# Example: Pulling v3.2
-wget [https://raw.githubusercontent.com/mauri101-Ar/ACMG-SF/main/data/ACMG_SF_3.2.tsv](https://raw.githubusercontent.com/mauri101-Ar/ACMG-SF/main/data/ACMG_SF_3.2.tsv)
+# Example: Pulling v3.3
+wget [https://raw.githubusercontent.com/mauri101-Ar/ACMG-SF/main/data/ACMG_SF_3.3.tsv](https://raw.githubusercontent.com/mauri101-Ar/ACMG-SF/main/data/ACMG_SF_3.3.tsv)
 ```
 
 ## Citation
