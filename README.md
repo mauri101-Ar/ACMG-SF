@@ -35,8 +35,32 @@ You can pull a specific version using `wget` or `curl` pointing to the raw file:
 
 ```bash
 # Example: Pulling v3.3
-wget [https://raw.githubusercontent.com/mauri101-Ar/ACMG-SF/main/data/ACMG_SF_3.3.tsv](https://raw.githubusercontent.com/mauri101-Ar/ACMG-SF/main/data/ACMG_SF_3.3.tsv)
+wget https://raw.githubusercontent.com/mauri101-Ar/ACMG-SF/main/data/ACMG_SF_3.3.tsv
+```
+
+## Data Curation Methodology
+
+To ensure interoperability and stability within bioinformatics pipelines, this repository does not only provide information extracted from original publications; it also enriches the datasets with stable identifiers.
+
+### HGNC ID Enrichment
+
+Gene symbols are volatile and change over time. To mitigate this and ensure data longevity, each list is programmatically processed using the internal `enrich_acmg.py` script.
+
+**Enrichment Process:**  
+
+1. **Source of Truth:** We use the official **HGNC REST API** (genenames.org) to map each symbol to its unique and permanent `HGNC_ID`.
+2. **Symbol Validation:** The process ensures that the symbol provided in the TSV matches the current *Approved Symbol* designated by HGNC.
+3. **Automation:** The script reads the Gene Symbol (extracted from the ACMG policy statements) and generates the final enriched TSV by inserting the `HGNC_ID` column specifically between the `Gene` and `Inheritance` columns.
+
+### Internal Script Usage
+
+While the TSV files in the `data/` directory are already processed and ready for use, the script is included for auditing purposes or to process future updates (e.g., v3.4, v4.0):
+
+```bash
+# Syntax
+python scripts/enrich_acmg.py <raw_input.tsv> <enriched_output.tsv>
 ```
 
 ## Citation
+
 Please cite the original ACMG publications listed in the table above when using these lists in clinical reports.
