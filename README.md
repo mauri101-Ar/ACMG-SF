@@ -4,13 +4,18 @@ This repository maintains machine-readable (TSV) versions of the **American Coll
 
 The goal is to provide structured data for bioinformatics pipelines, ensuring reproducibility and easy integration.
 
-## Available Versions
+## Available Versions & References
 
-| ACMG Version | Release Date | Paper / Source | TSV File |
-| :--- | :--- | :--- | :--- |
-| **v3.2** | 2023 | [Miller et al. (2023)](https://pubmed.ncbi.nlm.nih.gov/37347242/) | [Download](./data/ACMG_SF_v3.2.tsv) |
-| **v3.1** | 2022 | [Miller et al. (2022)](https://pubmed.ncbi.nlm.nih.gov/35653630/) | [Download](./data/ACMG_SF_v3.1.tsv) |
-| **v3.0** | 2021 | [Miller et al. (2021)](https://pubmed.ncbi.nlm.nih.gov/34012068/) | [Download](./data/ACMG_SF_v3.0.tsv) |
+The following table tracks the history of ACMG Secondary Findings (SF) lists, linking to the original policy statements and their respective machine-readable datasets in this repository.
+
+| Version | Year | PubMed | TSV Data |
+| :--- | :---: | :--- | :--- |
+| **v3.3** | 2025 | [PMID: 37347242](https://pubmed.ncbi.nlm.nih.gov/40568962/) | [Download](./data/ACMG_SF_v3.3.tsv) |
+| **v3.2** | 2023 | [PMID: 37347242](https://pubmed.ncbi.nlm.nih.gov/37347242/) | [Download](./data/ACMG_SF_v3.2.tsv) |
+| **v3.1** | 2022 | [PMID: 35802134](https://pubmed.ncbi.nlm.nih.gov/35802134/) | [Download](./data/ACMG_SF_v3.1.tsv) |
+| **v3.0** | 2021 | [PMID: 34012068](https://pubmed.ncbi.nlm.nih.gov/34012068/) | [Download](./data/ACMG_SF_v3.0.tsv) |
+| **v2.0** | 2016 | [PMID: 27854360](https://pubmed.ncbi.nlm.nih.gov/27854360/) | [Download](./data/ACMG_SF_v2.0.tsv) |
+| **v1.0** | 2013 | [PMID: 23788249](https://pubmed.ncbi.nlm.nih.gov/23788249/) | [Download](./data/ACMG_SF_v1.0.tsv) |
 
 ## Column Description
 
