@@ -9,6 +9,7 @@ import sys
 import time
 import pandas as pd
 import requests
+from tqdm import tqdm
 
 
 def get_hgnc_id(gene_symbol: str) -> str:
@@ -33,14 +34,13 @@ def get_hgnc_id(gene_symbol: str) -> str:
         docs = data.get('response', {}).get('docs', [])
 
         if not docs:
-            return "NOT_FOUND"
+            return "na"  # No matches found
 
         # Ensure we only pick the record that matches the symbol exactly
         for doc in docs:
             if doc.get('symbol') == gene_symbol:
                 return doc.get('hgnc_id')
-
-        return "NOT_FOUND"
+        return "na"
 
     except requests.exceptions.RequestException as err:
         print(f"Error connecting to HGNC API for {gene_symbol}: {err}")
@@ -64,10 +64,14 @@ def enrich_acmg_tsv(input_path: str, output_path: str):
         print(f"Processing {len(df)} genes from {input_path}...")
 
         hgnc_ids = []
-        for symbol in df['Gene']:
+        for symbol in tqdm(df['Gene'], desc="Fetching HGNC IDs", unit="gene"):
             clean_symbol = str(symbol).strip()
-            print(f"Fetching ID for: {clean_symbol}")
+            tqdm.write(f"Fetching ID for: {clean_symbol}...")
             hgnc_id = get_hgnc_id(clean_symbol)
+            if hgnc_id == "na":
+                tqdm.write(f"WARNING: No HGNC ID found for: {clean_symbol}")
+            else:
+                tqdm.write(f"Found HGNC ID for {clean_symbol}: {hgnc_id}")
             hgnc_ids.append(hgnc_id)
             time.sleep(0.2)  # Rate limiting
 
@@ -82,6 +86,9 @@ def enrich_acmg_tsv(input_path: str, output_path: str):
             insertion_idx = getattr(gene_loc, 'start', 0) + 1
 
         df.insert(loc=insertion_idx, column='HGNC_ID', value=hgnc_ids)
+
+        # Sort by 'Gene' column
+        df.sort_values(by='Gene', inplace=True)
 
         # Save the enriched file
         df.to_csv(output_path, sep='\t', index=False)
